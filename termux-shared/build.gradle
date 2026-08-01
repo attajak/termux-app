@@ -71,6 +71,10 @@ android {
             allVariants()
         }
     }
+
+    lintOptions {
+        baseline file("lint-baseline.xml")
+    }
 }
 
 dependencies {

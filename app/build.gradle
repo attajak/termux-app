@@ -43,7 +43,7 @@ android {
     defaultConfig {
         minSdkVersion project.properties.minSdkVersion.toInteger()
         targetSdkVersion project.properties.targetSdkVersion.toInteger()
-        versionCode 118
+        versionCode 1000
         versionName "0.118.0"
 
         if (appVersionName) versionName = appVersionName
@@ -89,7 +89,7 @@ android {
     buildTypes {
         release {
             minifyEnabled true
-            shrinkResources false // Reproducible builds
+            shrinkResources true // Reproducible builds
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
 
@@ -114,6 +114,10 @@ android {
 
     lint {
         disable 'ProtectedPermissions'
+    }
+
+    lintOptions {
+        baseline file("lint-baseline.xml")
     }
 
     testOptions {
@@ -219,11 +223,11 @@ task downloadBootstraps() {
     doLast {
         def packageVariant = project.ext.packageVariant
         if (packageVariant == "apt-android-7") {
-            def version = "2026.02.12-r1" + "%2B" + "apt.android-7"
-            downloadBootstrap("aarch64", "ea2aeba8819e517db711f8c32369e89e7c52cee73e07930ff91185e1ab93f4f3", version)
-            downloadBootstrap("arm", "a38f4d3b2f735f83be2bf54eff463e86dc32a3e2f9f861c1557c4378d249c018", version)
-            downloadBootstrap("i686", "f5bc0b025b9f3b420b5fcaeefc064f888f5f22a0d6fd7090f4aac0c33eb3555b", version)
-            downloadBootstrap("x86_64", "b7fd0f2e3a4de534be3144f9f91acc768630fc463eaf134ab2e64c545e834f7a", version)
+            def version = "2026.07.19-r1" + "%2B" + "apt.android-7"
+            downloadBootstrap("aarch64", "ae2306721a9c3344e51da8f9a582ff86a7ae3b9720b33c156feff2babe397220", version)
+            downloadBootstrap("arm", "ab9a7f3ed3347957dbfe0e6b5d4eadb70ef525a557961e5ed406e99ef13aa221", version)
+            downloadBootstrap("i686", "8cb66662b6e62dfee4f3ab52da2a54626456f200371680c7641aee9414fc2b0b", version)
+            downloadBootstrap("x86_64", "794e3b8dec7b99324d5071c9530f3c6d4c382442e8cebff0d97cbe44a2dcf030", version)
         } else if (packageVariant == "apt-android-5") {
             def version = "2022.04.28-r6" + "+" + packageVariant
             downloadBootstrap("aarch64", "913609d439415c828c5640be1b0561467e539cb1c7080662decaaca2fb4820e7", version)

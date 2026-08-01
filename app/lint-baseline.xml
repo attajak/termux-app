@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<issues format="6" by="lint 8.13.2" type="baseline" client="gradle" dependencies="false" name="AGP (8.13.2)" variant="all" version="8.13.2">
+
+    <issue
+        id="MissingSuperCall"
+        message="Overriding method should call `super.onBackPressed`"
+        errorLine1="    public void onBackPressed() {"
+        errorLine2="                ~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/termux/app/TermuxActivity.java"
+            line="603"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        message="Implicitly using the default locale is a common source of bugs: Use `toLowerCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`."
+        errorLine1="                    if (file.getName().toLowerCase().contains(query)) {"
+        errorLine2="                                       ~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/termux/filepicker/TermuxDocumentsProvider.java"
+            line="182"
+            column="40"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        message="Implicitly using the default locale is a common source of bugs: Use `toLowerCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`."
+        errorLine1="                final String extension = name.substring(lastDot + 1).toLowerCase();"
+        errorLine2="                                                                     ~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/termux/filepicker/TermuxDocumentsProvider.java"
+            line="223"
+            column="70"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        message="Implicitly using the default locale is a common source of bugs: Use `toLowerCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`."
+        errorLine1="            contentTypeToUse = mimeTypes.getMimeTypeFromExtension(fileExtension.toLowerCase());"
+        errorLine2="                                                                                ~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/termux/app/TermuxOpenReceiver.java"
+            line="100"
+            column="81"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        message="Implicitly using the default locale is a common source of bugs: Use `toLowerCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`."
+        errorLine1="                String ext = path.substring(extIndex).toLowerCase();"
+        errorLine2="                                                      ~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/termux/app/TermuxOpenReceiver.java"
+            line="179"
+            column="55"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        message="Implicitly using the default locale is a common source of bugs: Use `toLowerCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`."
+        errorLine1="        mWakeLock = pm.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK, TermuxConstants.TERMUX_APP_NAME.toLowerCase() + &quot;:service-wakelock&quot;);"
+        errorLine2="                                                                                                   ~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/termux/app/TermuxService.java"
+            line="314"
+            column="100"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        message="Implicitly using the default locale is a common source of bugs: Use `toLowerCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`."
+        errorLine1="        mWifiLock = wm.createWifiLock(WifiManager.WIFI_MODE_FULL_HIGH_PERF, TermuxConstants.TERMUX_APP_NAME.toLowerCase());"
+        errorLine2="                                                                                                            ~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/termux/app/TermuxService.java"
+            line="319"
+            column="109"/>
+    </issue>
+
+    <issue
+        id="RedundantLabel"
+        message="Redundant label can be removed"
+        errorLine1="            android:label=&quot;@string/application_name&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/AndroidManifest.xml"
+            line="56"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="RedundantLabel"
+        message="Redundant label can be removed"
+        errorLine1="            android:label=&quot;@string/application_name&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/AndroidManifest.xml"
+            line="94"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnspecifiedRegisterReceiverFlag"
+        message="`mTermuxActivityBroadcastReceiver` is missing `RECEIVER_EXPORTED` or `RECEIVER_NOT_EXPORTED` flag for unprotected broadcasts registered for com.termux.app.notify_app_crash, com.termux.app.reload_style, com.termux.app.request_storage_permissions"
+        errorLine1="        registerReceiver(mTermuxActivityBroadcastReceiver, intentFilter);"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/termux/app/TermuxActivity.java"
+            line="924"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="Deprecated"
+        message="Consider removing `sharedUserId` for new users by adding `android:sharedUserMaxSdkVersion=&quot;32&quot;` to your manifest. See https://developer.android.com/guide/topics/manifest/manifest-element for details."
+        errorLine1="    android:sharedUserId=&quot;${TERMUX_PACKAGE_NAME}&quot;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/AndroidManifest.xml"
+            line="5"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="UnspecifiedImmutableFlag"
+        message="Missing `PendingIntent` mutability flag"
+        errorLine1="        PendingIntent contentIntent = PendingIntent.getActivity(this, 0, notificationIntent, 0);"
+        errorLine2="                                                                                             ~">
+        <location
+            file="src/main/java/com/termux/app/TermuxService.java"
+            line="787"
+            column="94"/>
+    </issue>
+
+    <issue
+        id="UnspecifiedImmutableFlag"
+        message="Missing `PendingIntent` mutability flag"
+        errorLine1="        builder.addAction(android.R.drawable.ic_delete, res.getString(R.string.notification_action_exit), PendingIntent.getService(this, 0, exitIntent, 0));"
+        errorLine2="                                                                                                                                                        ~">
+        <location
+            file="src/main/java/com/termux/app/TermuxService.java"
+            line="830"
+            column="153"/>
+    </issue>
+
+    <issue
+        id="UnspecifiedImmutableFlag"
+        message="Missing `PendingIntent` mutability flag"
+        errorLine1="        builder.addAction(actionIcon, actionTitle, PendingIntent.getService(this, 0, toggleWakeLockIntent, 0));"
+        errorLine2="                                                                                                           ~">
+        <location
+            file="src/main/java/com/termux/app/TermuxService.java"
+            line="838"
+            column="108"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; `SDK_INT` is always >= 23"
+        errorLine1="        tools:targetApi=&quot;m&quot;>"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/AndroidManifest.xml"
+            line="50"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; `SDK_INT` is always >= 24"
+        errorLine1="            tools:targetApi=&quot;n&quot;>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/AndroidManifest.xml"
+            line="60"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; `SDK_INT` is always >= 24"
+        errorLine1="            tools:targetApi=&quot;n&quot; />"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/AndroidManifest.xml"
+            line="97"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; `SDK_INT` is always >= 24"
+        errorLine1="            tools:targetApi=&quot;n&quot;>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/AndroidManifest.xml"
+            line="117"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; `SDK_INT` is always >= 24"
+        errorLine1="        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N &amp;&amp; !PackageUtils.isCurrentUserThePrimaryUser(activity)) {"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/termux/app/TermuxInstaller.java"
+            line="76"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="StaticFieldLeak"
+        message="Do not place Android context classes in static fields (static reference to `DebuggingPreferencesDataStore` which has field `mContext` pointing to `Context`); this is a memory leak"
+        errorLine1="    private static DebuggingPreferencesDataStore mInstance;"
+        errorLine2="            ~~~~~~">
+        <location
+            file="src/main/java/com/termux/app/fragments/settings/termux_api/DebuggingPreferencesFragment.java"
+            line="55"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="StaticFieldLeak"
+        message="Do not place Android context classes in static fields (static reference to `DebuggingPreferencesDataStore` which has field `mContext` pointing to `Context`); this is a memory leak"
+        errorLine1="    private static DebuggingPreferencesDataStore mInstance;"
+        errorLine2="            ~~~~~~">
+        <location
+            file="src/main/java/com/termux/app/fragments/settings/termux_float/DebuggingPreferencesFragment.java"
+            line="55"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="StaticFieldLeak"
+        message="Do not place Android context classes in static fields (static reference to `DebuggingPreferencesDataStore` which has field `mContext` pointing to `Context`); this is a memory leak"
+        errorLine1="    private static DebuggingPreferencesDataStore mInstance;"
+        errorLine2="            ~~~~~~">
+        <location
+            file="src/main/java/com/termux/app/fragments/settings/termux_tasker/DebuggingPreferencesFragment.java"
+            line="55"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="StaticFieldLeak"
+        message="Do not place Android context classes in static fields (static reference to `DebuggingPreferencesDataStore` which has field `mContext` pointing to `Context`); this is a memory leak"
+        errorLine1="    private static DebuggingPreferencesDataStore mInstance;"
+        errorLine2="            ~~~~~~">
+        <location
+            file="src/main/java/com/termux/app/fragments/settings/termux_widget/DebuggingPreferencesFragment.java"
+            line="55"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="StaticFieldLeak"
+        message="Do not place Android context classes in static fields (static reference to `DebuggingPreferencesDataStore` which has field `mContext` pointing to `Context`); this is a memory leak"
+        errorLine1="    private static DebuggingPreferencesDataStore mInstance;"
+        errorLine2="            ~~~~~~">
+        <location
+            file="src/main/java/com/termux/app/fragments/settings/termux/DebuggingPreferencesFragment.java"
+            line="72"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="StaticFieldLeak"
+        message="Do not place Android context classes in static fields (static reference to `TerminalIOPreferencesDataStore` which has field `mContext` pointing to `Context`); this is a memory leak"
+        errorLine1="    private static TerminalIOPreferencesDataStore mInstance;"
+        errorLine2="            ~~~~~~">
+        <location
+            file="src/main/java/com/termux/app/fragments/settings/termux/TerminalIOPreferencesFragment.java"
+            line="35"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="StaticFieldLeak"
+        message="Do not place Android context classes in static fields (static reference to `TerminalViewPreferencesDataStore` which has field `mContext` pointing to `Context`); this is a memory leak"
+        errorLine1="    private static TerminalViewPreferencesDataStore mInstance;"
+        errorLine2="            ~~~~~~">
+        <location
+            file="src/main/java/com/termux/app/fragments/settings/termux/TerminalViewPreferencesFragment.java"
+            line="35"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="StaticFieldLeak"
+        message="Do not place Android context classes in static fields (static reference to `TermuxAPIPreferencesDataStore` which has field `mContext` pointing to `Context`); this is a memory leak"
+        errorLine1="    private static TermuxAPIPreferencesDataStore mInstance;"
+        errorLine2="            ~~~~~~">
+        <location
+            file="src/main/java/com/termux/app/fragments/settings/TermuxAPIPreferencesFragment.java"
+            line="35"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="StaticFieldLeak"
+        message="Do not place Android context classes in static fields (static reference to `TermuxFloatPreferencesDataStore` which has field `mContext` pointing to `Context`); this is a memory leak"
+        errorLine1="    private static TermuxFloatPreferencesDataStore mInstance;"
+        errorLine2="            ~~~~~~">
+        <location
+            file="src/main/java/com/termux/app/fragments/settings/TermuxFloatPreferencesFragment.java"
+            line="35"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="StaticFieldLeak"
+        message="Do not place Android context classes in static fields (static reference to `TermuxPreferencesDataStore` which has field `mContext` pointing to `Context`); this is a memory leak"
+        errorLine1="    private static TermuxPreferencesDataStore mInstance;"
+        errorLine2="            ~~~~~~">
+        <location
+            file="src/main/java/com/termux/app/fragments/settings/TermuxPreferencesFragment.java"
+            line="35"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="StaticFieldLeak"
+        message="Do not place Android context classes in static fields (static reference to `TermuxTaskerPreferencesDataStore` which has field `mContext` pointing to `Context`); this is a memory leak"
+        errorLine1="    private static TermuxTaskerPreferencesDataStore mInstance;"
+        errorLine2="            ~~~~~~">
+        <location
+            file="src/main/java/com/termux/app/fragments/settings/TermuxTaskerPreferencesFragment.java"
+            line="35"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="StaticFieldLeak"
+        message="Do not place Android context classes in static fields (static reference to `TermuxWidgetPreferencesDataStore` which has field `mContext` pointing to `Context`); this is a memory leak"
+        errorLine1="    private static TermuxWidgetPreferencesDataStore mInstance;"
+        errorLine2="            ~~~~~~">
+        <location
+            file="src/main/java/com/termux/app/fragments/settings/TermuxWidgetPreferencesFragment.java"
+            line="35"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.layout.preference_markdown_text` appears to be unused"
+        errorLine1="&lt;LinearLayout xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;"
+        errorLine2="^">
+        <location
+            file="src/main/res/layout/preference_markdown_text.xml"
+            line="5"
+            column="1"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.style.TermuxAlertDialogStyle` appears to be unused"
+        errorLine1="    &lt;style name=&quot;TermuxAlertDialogStyle&quot; parent=&quot;@android:style/Theme.Material.Light.Dialog.Alert&quot;>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/styles.xml"
+            line="4"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.style.Theme_TermuxApp_Light_DarkActionBar` appears to be unused"
+        errorLine1="    &lt;style name=&quot;Theme.TermuxApp.Light.DarkActionBar&quot; parent=&quot;Theme.BaseActivity.Light.DarkActionBar&quot;/>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/themes.xml"
+            line="8"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.style.Theme_TermuxApp_Light_NoActionBar` appears to be unused"
+        errorLine1="    &lt;style name=&quot;Theme.TermuxApp.Light.NoActionBar&quot; parent=&quot;Theme.BaseActivity.Light.NoActionBar&quot;/>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/themes.xml"
+            line="10"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="IconLocation"
+        message="Found bitmap drawable `res/drawable/banner.png` in densityless folder">
+        <location
+            file="src/main/res/drawable/banner.png"/>
+    </issue>
+
+</issues>
