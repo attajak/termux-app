@@ -48,12 +48,12 @@
     <issue
         id="DefaultLocale"
         message="Implicitly using the default locale is a common source of bugs: Use `toLowerCase(Locale)` instead. For strings meant to be internal use `Locale.ROOT`, otherwise `Locale.getDefault()`."
-        errorLine1="                String ext = path.substring(extIndex).toLowerCase();"
-        errorLine2="                                                      ~~~~~~~~~~~">
+        errorLine1="                String ext = pathComponent.substring(extIndex).toLowerCase();"
+        errorLine2="                                                               ~~~~~~~~~~~">
         <location
             file="src/main/java/com/termux/app/TermuxOpenReceiver.java"
-            line="179"
-            column="55"/>
+            line="181"
+            column="64"/>
     </issue>
 
     <issue
@@ -76,6 +76,39 @@
             file="src/main/java/com/termux/app/TermuxService.java"
             line="319"
             column="109"/>
+    </issue>
+
+    <issue
+        id="NotificationPermission"
+        message="When targeting Android 13 or higher, posting a permission requires holding the `POST_NOTIFICATIONS` permission"
+        errorLine1="            ((NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE)).notify(TermuxConstants.TERMUX_APP_NOTIFICATION_ID, buildNotification());"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/termux/app/TermuxService.java"
+            line="857"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="ForegroundServiceType"
+        message="To call `Service.startForeground()`, the `&lt;service>` element of manifest file must have the `foregroundServiceType` attribute specified"
+        errorLine1="            startForeground(TermuxConstants.TERMUX_RUN_COMMAND_NOTIFICATION_ID, buildNotification());"
+        errorLine2="            ~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/termux/app/RunCommandService.java"
+            line="263"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="ForegroundServiceType"
+        message="To call `Service.startForeground()`, the `&lt;service>` element of manifest file must have the `foregroundServiceType` attribute specified"
+        errorLine1="        startForeground(TermuxConstants.TERMUX_APP_NOTIFICATION_ID, buildNotification());"
+        errorLine2="        ~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/termux/app/TermuxService.java"
+            line="206"
+            column="9"/>
     </issue>
 
     <issue
@@ -156,6 +189,17 @@
     </issue>
 
     <issue
+        id="DataExtractionRules"
+        message="The attribute `android:allowBackup` is deprecated from Android 12 and higher and may be removed in future versions. Consider adding the attribute `android:dataExtractionRules` specifying an `@xml` resource which configures cloud backups and device transfers on Android 12 and higher."
+        errorLine1="        android:allowBackup=&quot;false&quot;"
+        errorLine2="                             ~~~~~">
+        <location
+            file="src/main/AndroidManifest.xml"
+            line="42"
+            column="30"/>
+    </issue>
+
+    <issue
         id="ObsoleteSdkInt"
         message="Unnecessary; `SDK_INT` is always >= 23"
         errorLine1="        tools:targetApi=&quot;m&quot;>"
@@ -196,6 +240,17 @@
         <location
             file="src/main/AndroidManifest.xml"
             line="117"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; `SDK_INT` is always >= 24"
+        errorLine1="        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N &amp;&amp;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/termux/app/terminal/TermuxActivityRootView.java"
+            line="135"
             column="13"/>
     </issue>
 

@@ -167,6 +167,28 @@
     </issue>
 
     <issue
+        id="QueryPermissionsNeeded"
+        message="Consider adding a `&lt;queries>` declaration to your manifest when calling this method; see https://g.co/dev/packagevisibility for details"
+        errorLine1="                return packageManager.queryIntentActivities(intent, flags).size() > 0;"
+        errorLine2="                                      ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/termux/shared/android/PackageUtils.java"
+            line="821"
+            column="39"/>
+    </issue>
+
+    <issue
+        id="QueryPermissionsNeeded"
+        message="Consider adding a `&lt;queries>` declaration to your manifest when calling this method; see https://g.co/dev/packagevisibility for details"
+        errorLine1="        List&lt;ResolveInfo> matches = context.getPackageManager().queryBroadcastReceivers(broadcast, 0);"
+        errorLine2="                                                                ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/termux/shared/termux/TermuxUtils.java"
+            line="296"
+            column="65"/>
+    </issue>
+
+    <issue
         id="CoreLibDesugaringV1"
         message="Core library desugaring runtime library version 1.1.5 does not support `compileSdk=35` or later; please upgrade to version 2.1.5"
         errorLine1="    coreLibraryDesugaring &quot;com.android.tools:desugar_jdk_libs:1.1.5&quot;"
@@ -179,7 +201,7 @@
 
     <issue
         id="GradleDependency"
-        message="A newer version of androidx.appcompat:appcompat than 1.6.1 is available: 1.7.1"
+        message="A newer version of androidx.appcompat:appcompat than 1.6.1 is available: 1.8.0"
         errorLine1="        implementation &quot;androidx.appcompat:appcompat:1.6.1&quot;"
         errorLine2="                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
@@ -190,7 +212,7 @@
 
     <issue
         id="GradleDependency"
-        message="A newer version of androidx.annotation:annotation than 1.9.0 is available: 1.10.0"
+        message="A newer version of androidx.annotation:annotation than 1.9.0 is available: 1.11.0"
         errorLine1="        implementation &quot;androidx.annotation:annotation:1.9.0&quot;"
         errorLine2="                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
@@ -201,7 +223,7 @@
 
     <issue
         id="GradleDependency"
-        message="A newer version of androidx.core:core than 1.13.1 is available: 1.19.0"
+        message="A newer version of androidx.core:core than 1.13.1 is available: 1.19.1"
         errorLine1="        implementation &quot;androidx.core:core:1.13.1&quot;"
         errorLine2="                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
@@ -245,7 +267,7 @@
 
     <issue
         id="NewerVersionAvailable"
-        message="A newer version of com.google.guava:guava than 24.1-jre is available: 33.6.0-jre"
+        message="A newer version of com.google.guava:guava than 24.1-jre is available: 33.7.2-jre"
         errorLine1="        implementation &quot;com.google.guava:guava:24.1-jre&quot;"
         errorLine2="                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location

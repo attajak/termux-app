@@ -3,7 +3,7 @@
 
     <issue
         id="GradleDependency"
-        message="A newer version of androidx.annotation:annotation than 1.9.0 is available: 1.10.0"
+        message="A newer version of androidx.annotation:annotation than 1.9.0 is available: 1.11.0"
         errorLine1="        implementation &quot;androidx.annotation:annotation:1.9.0&quot;"
         errorLine2="                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
@@ -19,8 +19,19 @@
         errorLine2="    ~~~~~~~~~~~~~~">
         <location
             file="src/main/java/com/termux/view/TerminalView.java"
-            line="605"
+            line="606"
             column="5"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; `SDK_INT` is always >= 24"
+        errorLine1="            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/termux/view/TerminalRenderer.java"
+            line="259"
+            column="17"/>
     </issue>
 
     <issue
@@ -30,7 +41,7 @@
         errorLine2="    ~~~~~~~~~~~~~~">
         <location
             file="src/main/java/com/termux/view/TerminalView.java"
-            line="605"
+            line="606"
             column="5"/>
     </issue>
 
@@ -41,7 +52,7 @@
         errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/java/com/termux/view/TerminalView.java"
-            line="1462"
+            line="1482"
             column="9"/>
     </issue>
 
@@ -52,7 +63,7 @@
         errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/java/com/termux/view/TerminalView.java"
-            line="1471"
+            line="1491"
             column="5"/>
     </issue>
 
@@ -63,7 +74,7 @@
         errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/java/com/termux/view/TerminalView.java"
-            line="1479"
+            line="1499"
             column="5"/>
     </issue>
 
@@ -74,7 +85,7 @@
         errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/java/com/termux/view/TerminalView.java"
-            line="1488"
+            line="1508"
             column="13"/>
     </issue>
 

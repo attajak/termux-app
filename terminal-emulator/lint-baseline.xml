@@ -8,7 +8,7 @@
         errorLine2="                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
             file="src/main/java/com/termux/terminal/TerminalEmulator.java"
-            line="1979"
+            line="2584"
             column="54"/>
     </issue>
 
@@ -25,7 +25,7 @@
 
     <issue
         id="GradleDependency"
-        message="A newer version of androidx.annotation:annotation than 1.9.0 is available: 1.10.0"
+        message="A newer version of androidx.annotation:annotation than 1.9.0 is available: 1.11.0"
         errorLine1="    implementation &quot;androidx.annotation:annotation:1.9.0&quot;"
         errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
         <location
